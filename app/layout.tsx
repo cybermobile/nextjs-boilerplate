@@ -1,28 +1,23 @@
-import React from 'react'
-import { Sidebar } from './components/layout/Sidebar'
-import { Header } from './components/layout/Header'
-import { Footer } from './components/layout/Footer'
-import './globals.css'
+'use client'
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+import React from 'react'
+import { usePathname } from 'next/navigation'
+import { Header } from '@/components/layout/Header'
+import { Sidebar } from '@/components/layout/Sidebar'
+
+export function LayoutContent({ children }: { children: React.ReactNode }) {
+  const pathname = usePathname()
+  const isLoginPage = pathname === '/login'
+
   return (
-    <html lang="en">
-      <body className="bg-gray-100 dark:bg-gray-900">
-        <div className="flex h-screen">
-          <Sidebar />
-          <div className="flex flex-col flex-1 overflow-hidden">
-            <Header />
-            <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-100 dark:bg-gray-800 p-6">
-              {children}
-            </main>
-            <Footer />
-          </div>
-        </div>
-      </body>
-    </html>
+    <div className="flex h-screen bg-gray-100">
+      {!isLoginPage && <Sidebar />}
+      <div className="flex-1 flex flex-col overflow-hidden">
+        {!isLoginPage && <Header />}
+        <main className="flex-1 overflow-x-hidden overflow-y-auto bg-gray-200">
+          {children}
+        </main>
+      </div>
+    </div>
   )
 }
