@@ -1,6 +1,6 @@
 import React from 'react'
-import { Button } from "@/components/ui/button"
-import { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent } from "@/components/ui/card"
+import { Button } from "@/app/components/ui/button"
+import { Card, CardHeader, CardFooter, CardTitle, CardDescription, CardContent } from "@/app/components/ui/card"
 import { Ship, Download, Mail } from 'lucide-react'
 
 export default function ButtonsPage() {

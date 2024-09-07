@@ -2,8 +2,8 @@
 
 import React from 'react'
 import { usePathname } from 'next/navigation'
-import { Header } from '@/components/layout/Header'
-import { Sidebar } from '@/components/layout/Sidebar'
+import { Header } from '@/app/components/layout/Header'
+import { Sidebar } from '@/app/components/layout/Sidebar'
 
 export function LayoutContent({ children }: { children: React.ReactNode }) {
   const pathname = usePathname()

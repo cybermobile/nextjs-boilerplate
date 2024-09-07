@@ -1,8 +1,8 @@
 import React from 'react'
 import Link from 'next/link'
-import { Button } from "@/components/ui/button"
-import { Input } from "@/components/ui/input"
-import { Badge } from "@/components/ui/badge"
+import { Button } from "@/app/components/ui/button"
+import { Input } from "@/app/components/ui/input"
+import { Badge } from "@/app/components/ui/badge"
 import { Search, Plus } from 'lucide-react'
 
 // This would typically come from an API or database
