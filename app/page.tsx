@@ -3,7 +3,7 @@ import Link from 'next/link'
 import { Button } from "@/app/components/ui/button"
 import { Ship } from 'lucide-react'
 
-const HomePage = () => {
+export default function Page() {
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-100">
       <div className="flex items-center gap-4 mb-8">
@@ -25,5 +25,3 @@ const HomePage = () => {
     </div>
   )
 }
-
-export default HomePage
